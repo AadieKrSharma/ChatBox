@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mr.programmerlab.chatbox">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="The ChatBOX"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="Login"
+            android:name=".LoginActivity" >
+        </activity>
+        <activity
+            android:label="Chat Activity"
+            android:name=".ChatActivity" >
+        </activity>
+        <activity
+            android:label="Welcome Screen"
+            android:name=".StartupActivity" >
+        </activity>
+    </application>
+
+</manifest>

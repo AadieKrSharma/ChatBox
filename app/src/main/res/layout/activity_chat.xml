@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/act1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="@color/colorPrimary"
+    tools:context=".ChatActivity"
+    android:background="@drawable/bg_chat"
+    android:animateLayoutChanges="true">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="9.5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="9.5dp"
+        android:autofillHints="@string/app_name"
+        android:gravity="start|center"
+        android:text="ChatBox Conversation"
+        android:textAlignment="gravity"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/terminal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47000003" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/terminal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:text="Connected user: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terminal"
+        />
+
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="238dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1.5"
+        android:background="@drawable/drawable_textbox"
+        android:ems="15"
+        android:hint="Message"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sndButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <Button
+        android:id="@+id/sndButton"
+        android:layout_width="60dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/button"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        android:text="->"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/terminal"
+        android:layout_width="340dp"
+        android:layout_height="420dp"
+        android:layout_above="@id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/drawable_terminal"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/terminaltext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:editable="false"
+            android:gravity="start|top|center|center_vertical|end"
+            android:inputType="none"
+            android:scrollbars="horizontal"
+            android:singleLine="false"
+            android:text=">The Conversation will start here as the server connects!!!..."
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:fontFamily="monospace"
+            android:textIsSelectable="false"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
